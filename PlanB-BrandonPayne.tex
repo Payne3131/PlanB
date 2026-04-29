@@ -177,7 +177,7 @@ observations. The implications of improper handling of missingness are
 far-reaching, especially when decisions about model structure or
 inference procedures are based on incomplete information.
 
-This paper focuses on a particular consequence of missing data analysis
+This paper focuses on a particular consequence of missing data analysis:
 double dipping (\protect\hyperlink{ref-Sunilems}{Jiang, Nguyen, and Rao
 2015}, \protect\hyperlink{ref-jiang2011best}{2011}). This occurs when
 the same data is used in multiple stages of model development without
@@ -268,7 +268,7 @@ Incomplete cases, particularly those with only 20--40\% of the full
 information available, often appear in genetic studies such as
 Quantitative Trait Loci (QTL) mapping, where limitations in data collection
 or sequencing coverage lead to substantial gaps. While several approaches
-exist to handle such missing data from complete case analysis to multiple
+exist to handle such missing data from complete-case analysis to multiple
 imputation, few adequately address the implications of using imputed data
 during both model selection and final inference.
 
@@ -403,7 +403,7 @@ $\pi_i = P(Y_i = 1)$, $Y_1, \ldots, Y_n$ being independent binary
 observations and $\mathbf{x}_i$ is a vector of covariates to be
 selected. Suppose that $y_1, \ldots, y_5$ are observed and the rest of
 the $y_i$'s are missing. For simplicity, assume that all the
-$\mathbf{x}_i$'s are observed and that missingness is MAR\ \hyperlink{ref-rubin1976inference}{(Rubin 1976)} for simplicity  .
+$\mathbf{x}_i$'s are observed and that missingness is MAR \protect\hyperlink{ref-rubin1976inference}{(Rubin 1976)} for simplicity  .
 
 Let $M_0$ denote the intercept-only model and suppose that the true
 model is not $M_0$. The complete-data log-likelihood under $M_0$ is $\ell = \sum_{i=1}^{n}   \bigl\{y_i \log p_0 + (1 - y_i)\log(1 - p_0)\bigr\},$
@@ -648,7 +648,7 @@ depending on initialization.
 
 \section{E-MS}
 
-The E--M is well known for parameter estimation in the presence of
+The E--M algorithm is well known for parameter estimation in the presence of
 missing data. On the other hand, model selection, as another component
 of model identification, may also be viewed as parameter estimation,
 with the parameter being the (identification (ID) number of) the model
@@ -717,7 +717,7 @@ log-likelihood, under a given model \(M\), can be expressed as
 \(\ell_M = \ell_{M, y \mid x} + \ell_x,\) where \(\ell_x\) does not
 depend on the model. Here,
 \(\ell_{M, y \mid x}= -0.5(n\log \sigma^2 + \sigma^{-2} \sum_{i=1}^{n} (y_i - x_i' \beta_M)^2),\)
-\(c\) being a constant. Thus, we have
+where \(c\) is a constant. Thus, we have
 \(\text{BIC}(M) = -2 \ell_M + |M| \log(n),\) where \(\hat{\ell}_M\) is
 the maximized \(\ell_M\) with respect to \(M\) and the parameters. It is
 easy to show that the MLE of \(\theta\), \(\hat{\theta}\), is the same
@@ -770,7 +770,7 @@ of regression coefficients under \(M_f\), note that the idea of least
 squares (LS) fit in regression is to find the parameter estimates that
 minimize \(\sum_{i=1}^{n} (y_i - \mathbb{E}_f(Y_i \mid x_o))^2,\) where
 \(\mathbb{E}_f\) denotes expectation under \(M_f\). Due to the missing
-data, it is natural to replace this by
+data, it is natural to replace this
 \(\sum_{i=1}^{n} (y_i - \mathbb{E}_f(Y_i \mid x_i))^2\) by
 \(\sum_{i \in I_o} (y_i - \mathbb{E}_f(Y_i \mid x_{i,o}))^2,\) where
 \(I_o\) denotes the subset of indices \(i\) such that \(y_i\) is
@@ -781,9 +781,9 @@ and an expression of the conditional expectation can be easily obtained,
 with \(\hat{\theta}_0\) replacing \(\theta\), if \(x_{ijk}\) is missing.
 We then run the LS with \(y_i\), \(i \in I_o\), as the responses and
 \(\mathbb{E}_f(X_{ijk} \mid x_{o,i})\), \(j = 1, \ldots, q\), as the
-predictors, to obtain the initial estimator \(\hat{beta}_{f,0}\) for
+predictors, to obtain the initial estimator \(\hat{\beta}_{f,0}\) for
 \(\beta_f\). The initial estimator for \(\sigma^2 , \hat{\sigma^2_0}\) ,
-is the RSS of this LS fit divided by \(|I_o| - qr\)
+is the RSS of this LS fit divided by \(|I_o| - qr\).
 
 Let \(y, x, x_c, x_d\) denote the data for
 \(y_i, x_i, x_{i,c}, x_{i,d}\), respectively, across \(1 \le i \le n\).

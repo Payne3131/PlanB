@@ -125,7 +125,7 @@
 }
 \makeatother
 \subtitle{A THESIS SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS
-FOR THE DEGREE OF MASTER OF PUBLIC HEALTH DATASCIENCE
+FOR THE DEGREE OF MASTER OF PUBLIC HEALTH DATA SCIENCE
 
 Committee:
 
@@ -341,7 +341,7 @@ they require careful tuning and may not inherently provide valid
 measures of uncertainty unless extended within a multiple-imputation
 framework.
 
-\section{Double Dipping problem}
+\section{Double Dipping Problem}
 
 In high-dimensional QTL studies and related genetic mapping contexts, a common analytical workflow uses the same dataset both to select models and to estimate their parameters or significance. This practice, often referred to as double dipping or circular analysis, arises when data are used first to generate hypotheses or select features and then reused to estimate or test those features without accounting for the selection process. The statistical danger of this workflow has been well documented in other fields, particularly in neuroimaging, where it was shown that re-analyzing data after selection leads to systematically biased effect sizes and invalid inferential statements (Kriegeskorte et al. (\protect\hyperlink{ref-Kriegeskorte2009}{2009})). QTL mapping is a particularly acute instance of this problem. Because the number of candidate loci vastly exceeds the number of observations, researchers must scan across the genome and select regions that exceed some significance threshold — yet most classical statistical inference assumes that the model was specified independently of the data used to estimate it. In QTL mapping, this assumption is routinely violated and the impact is magnified by the scale, sparsity, and missingness that characterize such data.
 
@@ -446,7 +446,7 @@ statistically sound.
 
 \section{Existing Approaches}
 
-\begin{comment} %lasso wasnt used in the paper
+\begin{comment} %lasso wasn't used in the paper
 \subsection{LASSO}
 
 The Least Absolute Shrinkage and Selection Operator (Lasso), introduced
@@ -666,7 +666,7 @@ expectation of \(Q(M)\) under \(M_c\), with the parameters under
 the E-step.
 
 In the next step, we carry out model selection
-using\(\mathbb{E}_c \{ Q(M) \mid y_o \}\) as the measure of lack-of-fit.
+using \(\mathbb{E}_c \{ Q(M) \mid y_o \}\) as the measure of lack-of-fit.
 To do so, we first find
 \(\hat{Q}_c(M) = \inf_{\theta_M \in \Theta_M}\mathbb{E}_c \{ Q(M) \mid y_o \},\)
 where \(\Theta_M\) is the parameter space under \(M\). We can use
@@ -754,7 +754,7 @@ under \(M_c\), before the minimization/maximization. This leads to
 + |M| \log(n). \tag{4}
 \end{equation}
 
-Both have closed-form expressions , where \(x_o\) and \(y_o\)
+Both have closed-form expressions, where \(x_o\) and \(y_o\)
 denote the observed \(x\)'s and \(y\)'s, respectively.
 
 In summary, given \(M_c\) and the current parameter estimates, the
@@ -902,7 +902,7 @@ where \(\propto\) means that the expression is up to a function of
 of \(y_{i,m}, x_{i,m}\). Next, we employ the Metropolized independence
 sampler (MIS; e.g., (\protect\hyperlink{ref-Liu2004MonteCarlo}{Liu 2004,
 115})), which is a special case of the Metropolis--Hastings algorithm.
-We refer the details to (\protect\hyperlink{ref-Sunilems}{Jiang, Nguyen,
+We refer readers to (\protect\hyperlink{ref-Sunilems}{Jiang, Nguyen,
 and Rao 2015}) Section A.4.2 of the online supplementary material.
 
 The initial estimates of \(\mu_r\), \(1 \le r \le s\), \(\Omega\),
@@ -936,7 +936,7 @@ where \(S_{ij}\), \(j = 1, 2\), are given below (7) with \(x_{if}\)
 replaced by \(x_{i,\hat{M}}\). Next, let \(\hat{\sigma}^2\) be given by
 (7), where \(S_{ij}\), \(j = 0, 1, 2\), are given below (7) with
 \(x_{if}\) replaced by \(x_{i,\hat{M}}\). Also, let
-\(\hat{\rho}_{f,r}\), \(1 \le r \le s\), and \(\hat{\pi}_f\),
+\(\hat{\rho}_{f,r}\), \(1 \le r \le s\), and \(\hat{\pi}_r\),
 \(1 \le f \le s\), be given by (8) and (9) (note that these depend only
 on \(M_0 = M_f\), but not on \(M\)).
 

@@ -156,7 +156,7 @@ inference (\protect\hyperlink{ref-Sunilems}{Jiang, Nguyen, and Rao
 investigates how double dipping manifests in the context of missing data
 imputation and demonstrates that the Expectation-Maximization-Model
 Selection (E-MS) framework (\protect\hyperlink{ref-Sunilems}{Jiang,
-Nguyen, and Rao 2015}) effectively addressing aspects of this problem.
+Nguyen, and Rao 2015}) effectively addresses aspects of this problem.
 We compare E-MS to conventional methods across a range of
 data-generating scenarios under different missing data mechanisms,
 including missing completely at random (MCAR), missing at random (MAR),
@@ -269,7 +269,7 @@ information available, often appear in genetic studies such as
 Quantitative Trait Loci (QTL) mapping, where limitations in data collection
 or sequencing coverage lead to substantial gaps. While several approaches
 exist to handle such missing data from complete case analysis to multiple
-imputation few adequately address the implications of using imputed data
+imputation, few adequately address the implications of using imputed data
 during both model selection and final inference.
 
 \section{Imputation}
@@ -304,8 +304,8 @@ After statistical analyses are performed separately on each imputed
 dataset, the results are combined using Rubin's rules, which account for
 both within-imputation and between-imputation variability. This leads to
 unbiased parameter estimates and valid standard errors when data are
-missing at random (MAR) Buuren
-(\protect\hyperlink{ref-vanBuuren2018}{2018}). Although MI requires more
+missing at random (MAR) 
+(\protect\hyperlink{ref-vanBuuren2018}{Van Buuren 2018}). Although MI requires more
 computation and careful model specification than single imputation, its
 ability to incorporate uncertainty makes it far more statistically
 robust.
@@ -362,7 +362,7 @@ This issue becomes more severe in the presence of missing data and
 genotype imputation, which are now unavoidable in modern QTL studies.
 High-resolution mapping pipelines rely on probabilistic reconstruction
 of unobserved genotypes from low-coverage sequencing or from related
-individuals, often in complex multi-parent populations (Huang and al.
+individuals, often in complex multi-parent populations (Huang et al.
 (\protect\hyperlink{ref-Huang2012}{2012}); Karl W. Broman et al.
 (\protect\hyperlink{ref-Broman2017}{2017})). These imputation models are
 trained on the observed data and encode assumptions about haplotype
@@ -403,7 +403,7 @@ $\pi_i = P(Y_i = 1)$, $Y_1, \ldots, Y_n$ being independent binary
 observations and $\mathbf{x}_i$ is a vector of covariates to be
 selected. Suppose that $y_1, \ldots, y_5$ are observed and the rest of
 the $y_i$'s are missing. For simplicity, assume that all the
-$\mathbf{x}_i$'s are observed and that missingness is MAR\ \hyperlink{ref-rubin1976inference}{(Rubin 1976)} in the following  for simplicity  .
+$\mathbf{x}_i$'s are observed and that missingness is MAR\ \hyperlink{ref-rubin1976inference}{(Rubin 1976)} for simplicity  .
 
 Let $M_0$ denote the intercept-only model and suppose that the true
 model is not $M_0$. The complete-data log-likelihood under $M_0$ is $\ell = \sum_{i=1}^{n}   \bigl\{y_i \log p_0 + (1 - y_i)\log(1 - p_0)\bigr\},$
@@ -754,7 +754,7 @@ under \(M_c\), before the minimization/maximization. This leads to
 + |M| \log(n). \tag{4}
 \end{equation}
 
-Both of which have closed-form expressions , where \(x_o\) and \(y_o\)
+Both have closed-form expressions , where \(x_o\) and \(y_o\)
 denote the observed \(x\)'s and \(y\)'s, respectively.
 
 In summary, given \(M_c\) and the current parameter estimates, the
@@ -768,7 +768,7 @@ of observed cases in which \(x_{i,j+1,k}\) and \(x_{ijk}\) are
 different. As for the initial estimator of \(\hat{\beta}_f\), the vector
 of regression coefficients under \(M_f\), note that the idea of least
 squares (LS) fit in regression is to find the parameter estimates that
-minimize \(\sum_{i=1}^{n} (y_i - \mathbb{E}_f(Y_i \mid x_o)^2,\) where
+minimize \(\sum_{i=1}^{n} (y_i - \mathbb{E}_f(Y_i \mid x_o))^2,\) where
 \(\mathbb{E}_f\) denotes expectation under \(M_f\). Due to the missing
 data, it is natural to replace this by
 \(\sum_{i=1}^{n} (y_i - \mathbb{E}_f(Y_i \mid x_i))^2\) by
@@ -878,7 +878,7 @@ obtain a conditional density \(f(y_m, x_m \mid y_o, x_o)\), the result
 is not a common distribution (e.g., normal), under which the conditional
 expectations can be easily obtained analytically. Alternatively, one may
 consider sampling from the conditional distribution and use the Monte
-Carlo method to compute the conditional expectations.To do so, first
+Carlo method to compute the conditional expectations. To do so, first
 note that it is easy to show that one can sample from the joint
 conditional distribution by sampling independently from the conditional
 distribution for each subject. To sample from the subject conditional
@@ -903,7 +903,7 @@ of \(y_{i,m}, x_{i,m}\). Next, we employ the Metropolized independence
 sampler (MIS; e.g., (\protect\hyperlink{ref-Liu2004MonteCarlo}{Liu 2004,
 115})), which is a special case of the Metropolis--Hastings algorithm.
 We refer the details to (\protect\hyperlink{ref-Sunilems}{Jiang, Nguyen,
-and Rao 2015})Section A.4.2 of the online supplementary material.
+and Rao 2015}) Section A.4.2 of the online supplementary material.
 
 The initial estimates of \(\mu_r\), \(1 \le r \le s\), \(\Omega\),
 \(\pi_r\), \(1 \le r \le s\), are
